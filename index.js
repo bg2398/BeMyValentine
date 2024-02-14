@@ -1,18 +1,23 @@
 // index.js
-
 $(document).ready(function () {
     // Set your password
     const correctPassword = '11/25/2016';
 
     $('.title').click(function () {
-        const enteredPassword = prompt('Enter our anniversary(mm/dd/yyyy');
+        $('#passwordModal').fadeIn(); // Show the password modal
+        $('#passwordInput').val(''); // Clear any previous input
+    });
+
+    $('#passwordSubmit').click(function () {
+        const enteredPassword = $('#passwordInput').val();
 
         if (enteredPassword === correctPassword) {
             // Password is correct, show the content
             $('.container').addClass('open');
             $('.bgoverlay').removeClass('bg-default').addClass('bg-special');
+            $('#passwordModal').fadeOut(); // Hide the password modal
         } else {
-            // Password is incorrect, do not show the content
+            // Password is incorrect, show an alert
             alert('Incorrect password. Access denied.');
         }
     });

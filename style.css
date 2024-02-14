@@ -41,7 +41,7 @@ body {
     margin-left: -95px;
     margin-top: -73px;
     z-index: 4;
-    font-size: 50px;
+    font-size: 60px;
     font-family: 'Pacifico', cursive;
     color: #fff;
     cursor: pointer;
@@ -130,7 +130,7 @@ body {
 }
 
 .additional-image-container img {
-    max-width: 67%;
+    max-width: 80%;
     height: auto;
     margin-top: 20px;
 }
@@ -186,6 +186,34 @@ body {
     width: 80px;
     display: inline-block;
     border-radius: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgb(103, 58, 183);
+    border-radius: 40px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+#passwordInput {
+border-radius: 25px;
+border-color: #e91e63;  
+margin: 10px;
+}
+
+#passwordSubmit {
+    border-radius: 15px;
+  border-color: rgb(103, 58, 183);
+    background-color:#e91e63
 }
 
 @keyframes explode {
